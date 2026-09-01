@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>THE 1975</title>
+  <meta name="description" content="THE 1975" />
+  <meta property="og:title" content="THE 1975" />
+  <meta property="og:description" content="THE 1975 - Being funny in a foreign language" />
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+  <header class="hud" data-hud></header>
+  <section class="hero" aria-label="THE 1975">
+    <img class="hero-photo" src="https://the1975.com/assets/The-1975---Being-Funny-In-A-Foreign-Language.jpg" alt="THE 1975" />
+    <div class="hero-shade"></div>
+    <div class="hero-copy">
+      <img class="wordmark rise d1" src="assets/the1975-wordmark.svg" alt="THE 1975" />
+      <div class="lockup rise d2"><p class="album">being funny <em>in a</em> foreign language</p></div>
+      <p class="meta rise d3"><span>DH01242</span><b>OUT NOW</b></p>
+      <div class="cinema rise d4">
+        <p>Listen to 'Being Funny In A Foreign Language' Now</p>
+        <div class="listen-row">
+          <a href="https://the-1975.ffm.to/apple" target="_blank" rel="noopener">Apple Music</a>
+          <a href="https://the-1975.ffm.to/amazonmusic" target="_blank" rel="noopener">Amazon Music</a>
+          <a href="https://the-1975.ffm.to/spotifycomplete" target="_blank" rel="noopener">Spotify</a>
+          <a href="https://the-1975.ffm.to/deezer" target="_blank" rel="noopener">Deezer</a>
+          <a href="https://the-1975.ffm.to/youtube" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://the1975.bandcamp.com/releases" target="_blank" rel="noopener">Bandcamp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <main>
+    <section class="section" id="formats">
+      <div class="wrap">
+        <p class="kicker">03 · Formats</p>
+        <h2>CD Vinyl Cassette</h2>
+        <div class="format-row" style="margin-top:22px">
+          <a href="https://the-1975.ffm.to/bfiflcd" target="_blank" rel="noopener">CD</a>
+          <a href="https://the-1975.ffm.to/bfiaflvinyl" target="_blank" rel="noopener">Vinyl</a>
+          <a href="https://the-1975.ffm.to/bfiafltape" target="_blank" rel="noopener">Cassette</a>
+          <a href="https://store.dirtyhit.co.uk/release/319015-the-1975-being-funny-in-a-foreign-language" target="_blank" rel="noopener">Zines</a>
+          <a href="indies.html">Indies</a>
+          <a href="shop.html">Merch</a>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="listen">
+      <div class="wrap split">
+        <div>
+          <p class="kicker">02 · Listen</p>
+          <h2>Being Funny In A Foreign Language</h2>
+          <p class="lede">Listen to 'Being Funny In A Foreign Language' Now</p>
+        </div>
+        <div class="frame">
+          <iframe src="https://www.youtube.com/embed/8QxIxvWzZnQ?rel=0" title="THE 1975" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="merch">
+      <div class="wrap">
+        <p class="kicker">04 · Merch</p>
+        <h2>Merch</h2>
+        <p class="lede">SHOP</p>
+        <div class="grid" id="home-grid" style="margin-top:28px"></div>
+        <p style="margin-top:22px"><a class="btn" href="shop.html">SHOP</a></p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="wrap">
+        <p class="kicker">Tour</p>
+        <h2>Tour</h2>
+        <p class="lede">No dates are listed on the official Tour page.</p>
+        <p style="margin-top:20px"><a class="btn" href="tour.html">Tour</a></p>
+      </div>
+    </section>
+  </main>
+  <div class="wrap"><footer data-foot></footer></div>
+  <script src="js/catalog.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    const root = document.getElementById("home-grid");
+    if (root && window.T1975_CATALOG) {
+      root.innerHTML = window.T1975_CATALOG.slice(0, 6).map((p) => `<a class="card" href="product.html?id=${p.id}"><div class="thumb"><img src="${p.img}" alt="${p.name}" /></div><div class="body"><h3>${p.name}</h3><div class="price">${window.T1975.money(p.price)}</div></div></a>`).join("");
+    }
+  </script>
+</body>
+</html>
